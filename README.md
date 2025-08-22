@@ -1,4 +1,4 @@
-##Catalogue Project
+**Catalogue Project**
 
 A **Spring Boot + Maven** application designed to manage **products and categories** efficiently.  
 This project follows a layered architecture (Controller → Service → Repository → Entity) and can be extended into a complete e-commerce or inventory system.  
