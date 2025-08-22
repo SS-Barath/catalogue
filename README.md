@@ -17,45 +17,7 @@ This project follows a layered architecture (Controller → Service → Reposito
 - **Database:** MySQL (can be switched to PostgreSQL, H2, etc.)  
 - **Version Control:** Git & GitHub  
 
-## Project Structure
-
-catalogue/
-┣ .mvn/ # Maven Wrapper
-┣ src/
-┃ ┣ main/
-┃ ┃ ┣ java/com/example/catalogue/
-┃ ┃ ┃ ┣ controller/ # REST Controllers (API Layer)
-┃ ┃ ┃ ┃ ┗ CategoryController.java
-┃ ┃ ┃ ┣ service/ # Business Logic Layer
-┃ ┃ ┃ ┃ ┗ CategoryService.java
-┃ ┃ ┃ ┣ repository/ # Data Access Layer (Spring Data JPA)
-┃ ┃ ┃ ┃ ┗ CategoryRepository.java
-┃ ┃ ┃ ┣ entity/ # JPA Entities (DB Models)
-┃ ┃ ┃ ┃ ┣ Category.java
-┃ ┃ ┃ ┃ ┣ CategoryAttribute.java
-┃ ┃ ┃ ┃ ┗ CategoryAttributeOption.java
-┃ ┃ ┃ ┣ dto/ # Data Transfer Objects
-┃ ┃ ┃ ┃ ┣ AttributeCreateRequest.java
-┃ ┃ ┃ ┃ ┗ AttributeOptionCreateRequest.java
-┃ ┃ ┃ ┣ exception/ # Custom Exceptions
-┃ ┃ ┃ ┃ ┗ NotFoundException.java
-┃ ┃ ┃ ┣ enums/ # Enum Types
-┃ ┃ ┃ ┃ ┗ AttributeType.java
-┃ ┃ ┃ ┣ config/ # Config Classes (if needed)
-┃ ┃ ┃ ┗ CatalogueApplication.java # Main Spring Boot Application
-┃ ┃ ┣ resources/
-┃ ┃ ┃ ┣ application.properties # Application Configuration
-┃ ┃ ┃ ┣ static/ # Static resources (CSS, JS, Images)
-┃ ┃ ┃ ┗ templates/ # Thymeleaf templates (if used)
-┃ ┣ test/java/com/example/catalogue/
-┃ ┃ ┗ CatalogueApplicationTests.java # Unit & Integration Tests
-┣ .gitignore
-┣ mvnw
-┣ mvnw.cmd
-┣ pom.xml # Maven Dependencies
-┗ README.md
-
-This structure separates:
+The project structure separates:
 
 Controller → API layer
 Service → Business logic
