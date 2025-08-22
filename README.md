@@ -20,40 +20,40 @@ This project follows a layered architecture (Controller → Service → Reposito
 ## Project Structure
 
 catalogue/
- ┣ .mvn/                        # Maven Wrapper
- ┣ src/
- ┃ ┣ main/
- ┃ ┃ ┣ java/com/example/catalogue/
- ┃ ┃ ┃ ┣ controller/            # REST Controllers (handle HTTP requests)
- ┃ ┃ ┃ ┃ ┗ CategoryController.java
- ┃ ┃ ┃ ┣ service/               # Business Logic Layer
- ┃ ┃ ┃ ┃ ┗ CategoryService.java
- ┃ ┃ ┃ ┣ repository/            # Data Access Layer (Spring Data JPA)
- ┃ ┃ ┃ ┃ ┗ CategoryRepository.java
- ┃ ┃ ┃ ┣ entity/                # JPA Entities (mapped to DB tables)
- ┃ ┃ ┃ ┃ ┣ Category.java
- ┃ ┃ ┃ ┃ ┣ CategoryAttribute.java
- ┃ ┃ ┃ ┃ ┗ CategoryAttributeOption.java
- ┃ ┃ ┃ ┣ dto/                   # Data Transfer Objects
- ┃ ┃ ┃ ┃ ┣ AttributeCreateRequest.java
- ┃ ┃ ┃ ┃ ┗ AttributeOptionCreateRequest.java
- ┃ ┃ ┃ ┣ exception/             
- ┃ ┃ ┃ ┃ ┗ NotFoundException.java
- ┃ ┃ ┃ ┣ config/                # Configuration Classes (if needed)
- ┃ ┃ ┃ ┣ enums/                 # Enum Types
- ┃ ┃ ┃ ┃ ┗ AttributeType.java
- ┃ ┃ ┃ ┗ CatalogueApplication.java  # Main Spring Boot Application
- ┃ ┃ ┣ resources/
- ┃ ┃ ┃ ┣ application.properties # DB + App Configuration
- ┃ ┃ ┃ ┣ static/               
- ┃ ┃ ┃ ┗ templates/            
- ┃ ┣ test/java/com/example/catalogue/
- ┃ ┃ ┗ CatalogueApplicationTests.java  # Unit & Integration Tests
- ┣ .gitignore
- ┣ mvnw
- ┣ mvnw.cmd
- ┣ pom.xml                      # Maven Dependencies
- ┗ README.md
+┣ .mvn/ # Maven Wrapper
+┣ src/
+┃ ┣ main/
+┃ ┃ ┣ java/com/example/catalogue/
+┃ ┃ ┃ ┣ controller/ # REST Controllers (API Layer)
+┃ ┃ ┃ ┃ ┗ CategoryController.java
+┃ ┃ ┃ ┣ service/ # Business Logic Layer
+┃ ┃ ┃ ┃ ┗ CategoryService.java
+┃ ┃ ┃ ┣ repository/ # Data Access Layer (Spring Data JPA)
+┃ ┃ ┃ ┃ ┗ CategoryRepository.java
+┃ ┃ ┃ ┣ entity/ # JPA Entities (DB Models)
+┃ ┃ ┃ ┃ ┣ Category.java
+┃ ┃ ┃ ┃ ┣ CategoryAttribute.java
+┃ ┃ ┃ ┃ ┗ CategoryAttributeOption.java
+┃ ┃ ┃ ┣ dto/ # Data Transfer Objects
+┃ ┃ ┃ ┃ ┣ AttributeCreateRequest.java
+┃ ┃ ┃ ┃ ┗ AttributeOptionCreateRequest.java
+┃ ┃ ┃ ┣ exception/ # Custom Exceptions
+┃ ┃ ┃ ┃ ┗ NotFoundException.java
+┃ ┃ ┃ ┣ enums/ # Enum Types
+┃ ┃ ┃ ┃ ┗ AttributeType.java
+┃ ┃ ┃ ┣ config/ # Config Classes (if needed)
+┃ ┃ ┃ ┗ CatalogueApplication.java # Main Spring Boot Application
+┃ ┃ ┣ resources/
+┃ ┃ ┃ ┣ application.properties # Application Configuration
+┃ ┃ ┃ ┣ static/ # Static resources (CSS, JS, Images)
+┃ ┃ ┃ ┗ templates/ # Thymeleaf templates (if used)
+┃ ┣ test/java/com/example/catalogue/
+┃ ┃ ┗ CatalogueApplicationTests.java # Unit & Integration Tests
+┣ .gitignore
+┣ mvnw
+┣ mvnw.cmd
+┣ pom.xml # Maven Dependencies
+┗ README.md
 
 This structure separates:
 
